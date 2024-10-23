@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frugal1/pages/weightUnitPage.dart';
-import 'package:frugal1/widgets/Weight_unit_tile.dart';
+import 'package:frugal1/widgets/weight_unit_tile.dart';
 
 class WeightPage extends StatefulWidget {
   const WeightPage({super.key});

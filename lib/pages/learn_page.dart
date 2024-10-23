@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frugal1/pages/Weight_page.dart';
+import 'package:frugal1/pages/weight_page.dart';
 import 'package:frugal1/pages/length_page.dart';
 import 'package:frugal1/pages/temperature_page.dart';
 import 'package:frugal1/pages/volume_page.dart';
