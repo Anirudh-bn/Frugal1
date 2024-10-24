@@ -1,0 +1,336 @@
+{
+    "appTitle": "MEASUREMENTS",
+    "@appTitle": {
+        "description": "The application title shown in the app bar"
+    },
+    "learn": "LEARN",
+    "@learn": {
+        "description": "Learn menu item title"
+    },
+    "play": "PLAY",
+    "@play": {
+        "description": "Play menu item title"
+    },
+    "practice": "PRACTICE",
+    "@practice": {
+        "description": "Practice menu item title"
+    },
+    
+   "lengthTitle": "LENGTH",
+  "@lengthTitle": {
+    "description": "Title for length section"
+  },
+  "weightTitle": "WEIGHT",
+  "@weightTitle": {
+    "description": "Title for weight section"
+  },
+  "temperatureTitle": "TEMPERATURE",
+  "@temperatureTitle": {
+    "description": "Title for temperature section"
+  },
+  "volumeTitle": "VOLUME",
+  "@volumeTitle": {
+    "description": "Title for volume section"
+  },
+  
+    "lengthUnits": "Length Units",
+    "metricSystem": "Metric System",
+    "usSystem": "US System",
+    "commonUses": "Common Uses:",
+    "next": "NEXT",
+    
+    "mmTitle": "Millimeter (mm)",
+    "mmDescription": "The smallest metric unit of length",
+    "mmDefinition": "A millimeter is one thousandth of a meter (1/1000 meter). It is commonly used for very small measurements such as technical drawings, medical equipment, and precision tools.",
+    
+    "cmTitle": "Centimeter (cm)",
+    "cmDescription": "Common metric unit for small measurements",
+    "cmDefinition": "A centimeter is one hundredth of a meter (1/100 meter). It is commonly used for everyday measurements like body height, furniture dimensions, and small objects.",
+    
+    "mTitle": "Meter (m)",
+    "mDescription": "The base unit of length in SI",
+    "mDefinition": "The meter is the base unit of length in the International System of Units (SI). Originally defined as one ten-millionth of the distance from the equator to the North Pole, it is now defined by the speed of light in vacuum.",
+    
+    "kmTitle": "Kilometer (km)",
+    "kmDescription": "Used for measuring long distances",
+    "kmDefinition": "A kilometer is one thousand meters (1000 meters). It is commonly used for measuring long distances like road lengths, geographic distances, and travel distances. 1 km = 0.621371 miles.",
+    
+    "inTitle": "Inch (in)",
+    "inDescription": "Basic unit of length in US system",
+    "inDefinition": "An inch is exactly 2.54 centimeters. It is commonly used in the US for small measurements like screen sizes, rainfall, and small object dimensions. 12 inches make 1 foot.",
+    
+    "ftTitle": "Foot (ft)",
+    "ftDescription": "Standard US unit for medium lengths",
+    "ftDefinition": "A foot is equal to 12 inches or approximately 30.48 centimeters. It is commonly used in the US for measuring height, room dimensions, and building measurements. 3 feet make 1 yard.",
+    
+    "ydTitle": "Yard (yd)",
+    "ydDescription": "Common unit for larger measurements",
+    "ydDefinition": "A yard is equal to 3 feet or 36 inches (approximately 0.9144 meters). It is commonly used in the US for measuring fabric, sports fields, and landscaping distances.",
+    
+    "miTitle": "Mile (mi)",
+    "miDescription": "US unit for long distances",
+    "miDefinition": "A mile is equal to 5,280 feet or 1.60934 kilometers. It is the standard unit for measuring long distances in the US, commonly used for road distances, travel distances, and geographic measurements.",
+
+      "mmCommonUses1": "Technical drawings and blueprints",
+      "mmCommonUses2": "Medical instruments and procedures",
+      "mmCommonUses3": "Electronics components",
+      "mmCommonUses4": "Precision manufacturing",
+
+  "cmCommonUses1": "Body measurements",
+  "cmCommonUses2": "Furniture dimensions",
+  "cmCommonUses3": "Clothing measurements",
+  "cmCommonUses4": "School supplies (rulers, etc.)",
+
+  "mCommonUses1": "Room dimensions",
+  "mCommonUses2": "Building measurements",
+  "mCommonUses3": "Athletic events",
+  "mCommonUses4": "Construction materials",
+
+  "kmCommonUses1": "Road distances",
+  "kmCommonUses2": "Travel planning",
+  "kmCommonUses3": "Geographic measurements",
+  "kmCommonUses4": "Marathon and racing events",
+
+  "inCommonUses1": "Screen sizes (TV, phones, etc.)",
+  "inCommonUses2": "Lumber dimensions",
+  "inCommonUses3": "Rainfall measurements",
+  "inCommonUses4": "Paper sizes",
+
+  "ftCommonUses1": "Human height",
+  "ftCommonUses2": "Room dimensions",
+  "ftCommonUses3": "Building measurements",
+  "ftCommonUses4": "Ceiling heights",
+
+  "ydCommonUses1": "Fabric measurements",
+  "ydCommonUses2": "Sports field dimensions",
+  "ydCommonUses3": "Landscaping",
+  "ydCommonUses4": "Football field measurements",
+
+  "miCommonUses1": "Road distances",
+  "miCommonUses2": "Running and walking events",
+  "miCommonUses3": "City planning",
+  "miCommonUses4": "Navigation",
+  
+
+    "weightUnits": "Weight Units",
+    "@weightUnits": {
+        "description": "Title for weight units page"
+    },
+
+    "mgTitle": "Milligram (mg)",
+    "@mgTitle": {
+        "description": "Title for milligram unit"
+    },
+    "mgDescription": "Smallest commonly used metric weight unit",
+    "mgDefinition": "A milligram is one thousandth (1/1000) of a gram. It is commonly used in medicine for precise measurements of medication dosages and in scientific laboratories.",
+    "mgCommonUses1": "Medication dosages",
+    "mgCommonUses2": "Nutritional supplements",
+    "mgCommonUses3": "Laboratory measurements",
+    "mgCommonUses4": "Chemical compounds",
+
+    "gTitle": "Gram (g)",
+    "@gTitle": {
+        "description": "Title for gram unit"
+    },
+    "gDescription": "Basic metric unit of mass",
+    "gDefinition": "A gram is the basic unit of mass in the metric system. It is commonly used for measuring small quantities of food ingredients, chemicals, and other lightweight items. 1 gram = 0.035274 ounces.",
+    "gCommonUses1": "Food ingredients",
+    "gCommonUses2": "Postal services",
+    "gCommonUses3": "Jewelry weight",
+    "gCommonUses4": "Cooking measurements",
+
+    "kgTitle": "Kilogram (kg)",
+    "@kgTitle": {
+        "description": "Title for kilogram unit"
+    },
+    "kgDescription": "Standard metric unit for weight",
+    "kgDefinition": "A kilogram is equal to 1000 grams. It is the standard unit of mass in the metric system and is used for measuring body weight, grocery items, and medium-sized objects. 1 kg = 2.20462 pounds.",
+    "kgCommonUses1": "Body weight",
+    "kgCommonUses2": "Grocery items",
+    "kgCommonUses3": "Luggage weight",
+    "kgCommonUses4": "Gym equipment",
+
+    "tTitle": "Metric Ton (t)",
+    "@tTitle": {
+        "description": "Title for metric ton unit"
+    },
+    "tDescription": "Used for very heavy weights",
+    "tDefinition": "A metric ton is equal to 1000 kilograms. It is used for measuring very heavy items like vehicles, shipping containers, and industrial materials. 1 metric ton = 2204.62 pounds.",
+    "tCommonUses1": "Shipping containers",
+    "tCommonUses2": "Vehicle weights",
+    "tCommonUses3": "Industrial materials",
+    "tCommonUses4": "Bulk commodities",
+
+    "ozTitle": "Ounce (oz)",
+    "@ozTitle": {
+        "description": "Title for ounce unit"
+    },
+    "ozDescription": "Basic US unit for small weights",
+    "ozDefinition": "An ounce is equal to 28.3495 grams. It is commonly used in the US for measuring small quantities of food, beverages, and other lightweight items. 16 ounces = 1 pound.",
+    "ozCommonUses1": "Food packaging",
+    "ozCommonUses2": "Beverage sizes",
+    "ozCommonUses3": "Precious metals",
+    "ozCommonUses4": "Personal care products",
+
+    "lbTitle": "Pound (lb)",
+    "@lbTitle": {
+        "description": "Title for pound unit"
+    },
+    "lbDescription": "Standard US weight unit",
+    "lbDefinition": "A pound is equal to 16 ounces or 0.453592 kilograms. It is the standard unit of weight in the US system, used for measuring body weight, food items, and medium-sized objects.",
+    "lbCommonUses1": "Body weight",
+    "lbCommonUses2": "Food quantities",
+    "lbCommonUses3": "Package shipping",
+    "lbCommonUses4": "Construction materials",
+
+    "stTitle": "Stone (st)",
+    "@stTitle": {
+        "description": "Title for stone unit"
+    },
+    "stDescription": "Traditional weight measure",
+    "stDefinition": "A stone is equal to 14 pounds or approximately 6.35 kilograms. While not commonly used in the US, it is still used in the UK and Ireland, particularly for measuring body weight.",
+    "stCommonUses1": "Body weight (UK)",
+    "stCommonUses2": "Medical records",
+    "stCommonUses3": "Fitness tracking",
+    "stCommonUses4": "Weight loss goals",
+
+    "tonTitle": "US Ton",
+    "@tonTitle": {
+        "description": "Title for US ton unit"
+    },
+    "tonDescription": "US unit for very heavy weights",
+    "tonDefinition": "A US ton (also called short ton) is equal to 2000 pounds or approximately 907.185 kilograms. It is commonly used in the US for measuring very heavy items like vehicles and industrial materials.",
+    "tonCommonUses1": "Construction materials",
+    "tonCommonUses2": "Industrial equipment",
+    "tonCommonUses3": "Agricultural products",
+    "tonCommonUses4": "Mining materials",
+    
+        "volumeUnits": "Volume Units",
+        "@volumeUnits": {
+            "description": "Title for volume units page"
+        },
+    
+        "mlTitle": "Milliliter (mL)",
+        "@mlTitle": {
+            "description": "Title for milliliter unit"
+        },
+        "mlDescription": "Basic metric unit for small volumes",
+        "mlDefinition": "A milliliter is one thousandth (1/1000) of a liter. It is equal to one cubic centimeter (cm³). 1 mL = 0.0338 fluid ounces.",
+        "mlCommonUses1": "Medicine dosage measurements",
+        "mlCommonUses2": "Small cooking measurements",
+        "mlCommonUses3": "Laboratory measurements",
+        "mlCommonUses4": "Small beverage portions",
+    
+        "lTitle": "Liter (L)",
+        "@lTitle": {
+            "description": "Title for liter unit"
+        },
+        "lDescription": "Standard metric volume unit",
+        "lDefinition": "A liter is the basic metric unit of volume, equal to 1000 milliliters or 1 cubic decimeter. 1 L = 1.0567 US quarts.",
+        "lCommonUses1": "Beverage containers",
+        "lCommonUses2": "Fuel measurements",
+        "lCommonUses3": "Large cooking measurements",
+        "lCommonUses4": "Water consumption",
+    
+        "m3Title": "Cubic Meter (m³)",
+        "@m3Title": {
+            "description": "Title for cubic meter unit"
+        },
+        "m3Description": "Larger metric volume unit",
+        "m3Definition": "A cubic meter is equal to 1000 liters. It is commonly used for larger volume measurements. 1 m³ = 264.172 US gallons.",
+        "m3CommonUses1": "Swimming pools",
+        "m3CommonUses2": "Industrial containers",
+        "m3CommonUses3": "Room volumes",
+        "m3CommonUses4": "Water tanks",
+    
+        "flozTitle": "Fluid Ounce (fl oz)",
+        "@flozTitle": {
+            "description": "Title for fluid ounce unit"
+        },
+        "flozDescription": "Basic US unit for liquid volume",
+        "flozDefinition": "A fluid ounce is about 29.5735 milliliters. 1 fl oz = 1/128 of a US gallon.",
+        "flozCommonUses1": "Beverage serving sizes",
+        "flozCommonUses2": "Small cooking measurements",
+        "flozCommonUses3": "Personal care products",
+        "flozCommonUses4": "Medicine doses",
+    
+        "cupTitle": "Cup",
+        "@cupTitle": {
+            "description": "Title for cup unit"
+        },
+        "cupDescription": "Common US cooking measure",
+        "cupDefinition": "A US cup is equal to 8 fluid ounces or about 236.588 milliliters.",
+        "cupCommonUses1": "Cooking and baking",
+        "cupCommonUses2": "Recipe measurements",
+        "cupCommonUses3": "Beverage servings",
+        "cupCommonUses4": "Food packaging",
+    
+        "ptTitle": "Pint (pt)",
+        "@ptTitle": {
+            "description": "Title for pint unit"
+        },
+        "ptDescription": "Medium US volume measure",
+        "ptDefinition": "A US pint is equal to 2 cups or 16 fluid ounces (about 473.176 milliliters).",
+        "ptCommonUses1": "Ice cream containers",
+        "ptCommonUses2": "Milk containers",
+        "ptCommonUses3": "Large cooking measurements",
+        "ptCommonUses4": "Beverage servings",
+    
+        "qtTitle": "Quart (qt)",
+        "@qtTitle": {
+            "description": "Title for quart unit"
+        },
+        "qtDescription": "Larger US volume measure",
+        "qtDefinition": "A US quart is equal to 2 pints or 32 fluid ounces (about 946.353 milliliters).",
+        "qtCommonUses1": "Large beverage containers",
+        "qtCommonUses2": "Motor oil",
+        "qtCommonUses3": "Large food containers",
+        "qtCommonUses4": "Paint cans",
+    
+        "galTitle": "Gallon (gal)",
+        "@galTitle": {
+            "description": "Title for gallon unit"
+        },
+        "galDescription": "Large US volume unit",
+        "galDefinition": "A US gallon is equal to 4 quarts or 128 fluid ounces (about 3.78541 liters).",
+        "galCommonUses1": "Milk containers",
+        "galCommonUses2": "Fuel measurements",
+        "galCommonUses3": "Water containers",
+        "galCommonUses4": "Large liquid products",
+
+        
+            "temperatureScales": "Temperature Scales",
+            "@temperatureScales": {
+                "description": "Title for temperature scales page"
+            },
+        
+            "referencePoints": "Common Reference Points:",
+            "@referencePoints": {
+                "description": "Title for temperature reference points section"
+            },
+        
+            "celsiusTitle": "Celsius (°C)",
+            "@celsiusTitle": {
+                "description": "Title for Celsius scale"
+            },
+            "celsiusDescription": "Most widely used temperature scale",
+            "celsiusDefinition": "The Celsius scale is based on the freezing point of water (0°C) and its boiling point (100°C) at standard atmospheric pressure. It is the most widely used temperature scale in the world.\n\nConversion formulas:\nTo Fahrenheit: °F = (°C × 9/5) + 32\nTo Kelvin: K = °C + 273.15",
+            "celsiusReferencePoints": "• Water freezing: 0°C\n• Room temperature: ~20-25°C\n• Body temperature: 37°C\n• Water boiling: 100°C",
+        
+            "fahrenheitTitle": "Fahrenheit (°F)",
+            "@fahrenheitTitle": {
+                "description": "Title for Fahrenheit scale"
+            },
+            "fahrenheitDescription": "Common in the United States",
+            "fahrenheitDefinition": "The Fahrenheit scale sets the freezing point of water at 32°F and its boiling point at 212°F. It is primarily used in the United States for everyday temperature measurements.\n\nConversion formulas:\nTo Celsius: °C = (°F - 32) × 5/9\nTo Kelvin: K = (°F - 32) × 5/9 + 273.15",
+            "fahrenheitReferencePoints": "• Water freezing: 32°F\n• Room temperature: ~68-77°F\n• Body temperature: 98.6°F\n• Water boiling: 212°F",
+        
+            "kelvinTitle": "Kelvin (K)",
+            "@kelvinTitle": {
+                "description": "Title for Kelvin scale"
+            },
+            "kelvinDescription": "Scientific absolute temperature scale",
+            "kelvinDefinition": "The Kelvin scale is the SI base unit of temperature. It starts at absolute zero (0K), the theoretical lowest possible temperature. There are no negative temperatures in Kelvin.\n\nConversion formulas:\nTo Celsius: °C = K - 273.15\nTo Fahrenheit: °F = (K - 273.15) × 9/5 + 32",
+            "kelvinReferencePoints": "• Absolute zero: 0K\n• Water freezing: 273.15K\n• Room temperature: ~293-298K\n• Water boiling: 373.15K"
+
+}

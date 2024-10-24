@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frugal1/pages/weight_page.dart';
 import 'package:frugal1/pages/length_page.dart';
 import 'package:frugal1/pages/temperature_page.dart';
 import 'package:frugal1/pages/volume_page.dart';
 import 'package:frugal1/widgets/learn_tile.dart';
+import 'package:frugal1/providers/locale_provider.dart';
 
 class LearnPage extends StatefulWidget {
   const LearnPage({super.key});
@@ -13,38 +16,62 @@ class LearnPage extends StatefulWidget {
 }
 
 class _LearnPageState extends State<LearnPage> {
-  // List of learning items
-  final List<Map<String, dynamic>> learnItems = const [
-    {
-      'title': 'LENGTH',
-      'onTap': null, // You'll add navigation functions here
-    },
-    {
-      'title': 'WEIGHT',
-      'onTap': null,
-    },
-    {
-      'title': 'TEMPERATURE',
-      'onTap': null,
-    },
-    {
-      'title': 'VOLUME',
-      'onTap': null,
-    },
-  ];
-
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    if (l10n == null) return const CircularProgressIndicator();
+
+    // List of learning items using localized strings
+    final List<Map<String, dynamic>> learnItems = [
+      {
+        'title': l10n.lengthTitle,
+        'key': 'LENGTH',
+      },
+      {
+        'title': l10n.weightTitle,
+        'key': 'WEIGHT',
+      },
+      {
+        'title': l10n.temperatureTitle,
+        'key': 'TEMPERATURE',
+      },
+      {
+        'title': l10n.volumeTitle,
+        'key': 'VOLUME',
+      },
+    ];
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: const Color(0xFF00A6DA),
-        title: const Text('LEARN'),
+        title: Text(l10n.learn),
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
         ),
+        actions: [
+          // Add this actions list
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: TextButton(
+              onPressed: () {
+                context.read<LocaleProvider>().toggleLocale();
+              },
+              child: Text(
+                context.watch<LocaleProvider>().locale.languageCode == 'en'
+                    ? 'ES'
+                    : 'EN',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       body: Center(
         child: Column(
@@ -53,8 +80,8 @@ class _LearnPageState extends State<LearnPage> {
               .map((item) => LearnTile(
                     title: item['title'],
                     onTap: () {
-                      // Add navigation based on title
-                      switch (item['title']) {
+                      // Add navigation based on key
+                      switch (item['key']) {
                         case 'LENGTH':
                           Navigator.push(
                             context,
