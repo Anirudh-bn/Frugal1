@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:frugal1/pages/lengthUnitPage.dart';
+import 'package:frugal1/pages/lengthunitpage.dart';
 import 'package:frugal1/widgets/length_unit_tile.dart';
 import 'package:frugal1/providers/locale_provider.dart';
 
@@ -35,22 +35,22 @@ class _LengthPageState extends State<LengthPage>
 
     final List<Map<String, dynamic>> metricUnits = [
       {
-        'unitType': 'mm',
+        'unitType': 'millimeter',
         'title': l10n.mmTitle,
         'description': l10n.mmDescription,
       },
       {
-        'unitType': 'cm',
+        'unitType': 'centimeter',
         'title': l10n.cmTitle,
         'description': l10n.cmDescription,
       },
       {
-        'unitType': 'm',
+        'unitType': 'meter',
         'title': l10n.mTitle,
         'description': l10n.mDescription,
       },
       {
-        'unitType': 'km',
+        'unitType': 'kilometer',
         'title': l10n.kmTitle,
         'description': l10n.kmDescription,
       },
@@ -58,22 +58,22 @@ class _LengthPageState extends State<LengthPage>
 
     final List<Map<String, dynamic>> usUnits = [
       {
-        'unitType': 'in',
+        'unitType': 'inch',
         'title': l10n.inTitle,
         'description': l10n.inDescription,
       },
       {
-        'unitType': 'ft',
+        'unitType': 'foot',
         'title': l10n.ftTitle,
         'description': l10n.ftDescription,
       },
       {
-        'unitType': 'yd',
+        'unitType': 'yard',
         'title': l10n.ydTitle,
         'description': l10n.ydDescription,
       },
       {
-        'unitType': 'mi',
+        'unitType': 'mile',
         'title': l10n.miTitle,
         'description': l10n.miDescription,
       },
@@ -123,6 +123,7 @@ class _LengthPageState extends State<LengthPage>
               return LengthUnitTile(
                 title: unit['title']!,
                 description: unit['description']!,
+                unitType: unit['unitType']!,
                 onTap: () {
                   Navigator.push(
                     context,
@@ -144,6 +145,7 @@ class _LengthPageState extends State<LengthPage>
               return LengthUnitTile(
                 title: unit['title']!,
                 description: unit['description']!,
+                unitType: unit['unitType']!,
                 onTap: () {
                   Navigator.push(
                     context,

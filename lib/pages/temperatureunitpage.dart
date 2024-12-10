@@ -2,14 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frugal1/providers/locale_provider.dart';
+import 'package:frugal1/services/audio_service.dart';
 
-class TemperatureUnitPage extends StatelessWidget {
+class TemperatureUnitPage extends StatefulWidget {
   final String unitType;
 
   const TemperatureUnitPage({
     required this.unitType,
     super.key,
   });
+
+  @override
+  State<TemperatureUnitPage> createState() => _TemperatureUnitPageState();
+}
+
+class _TemperatureUnitPageState extends State<TemperatureUnitPage> {
+  final AudioService audioService = AudioService();
+
+  @override
+  void initState() {
+    super.initState();
+    // Play audio when page loads
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      audioService.playUnitAudio(widget.unitType);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +37,7 @@ class TemperatureUnitPage extends StatelessWidget {
     String definition;
     String referencePoints;
 
-    switch (unitType) {
+    switch (widget.unitType) {
       case 'celsius':
         title = l10n.celsiusTitle;
         definition = l10n.celsiusDefinition;
@@ -51,6 +68,12 @@ class TemperatureUnitPage extends StatelessWidget {
           onPressed: () => Navigator.pop(context),
         ),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.volume_up),
+            onPressed: () {
+              audioService.playUnitAudio(widget.unitType);
+            },
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: TextButton(
@@ -78,13 +101,24 @@ class TemperatureUnitPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.brown,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      title,
+                      style: const TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.brown,
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.volume_up),
+                      onPressed: () {
+                        audioService.playUnitAudio(widget.unitType);
+                      },
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 20),
                 Container(

@@ -1,21 +1,30 @@
 import 'package:flutter/material.dart';
+import '../services/audio_service.dart';
 
 class LengthUnitTile extends StatelessWidget {
   final String title;
   final String description;
   final VoidCallback onTap;
+  final String unitType;
+  static final AudioService audioService = AudioService();
 
   const LengthUnitTile({
     required this.title,
     required this.description,
     required this.onTap,
+    required this.unitType,
     super.key,
   });
+
+  void _handleTap() {
+    audioService.playUnitAudio(unitType); // Play audio first
+    onTap(); // Then navigate
+  }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: _handleTap,
       child: Container(
         height: 80,
         margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
@@ -52,7 +61,6 @@ class LengthUnitTile extends StatelessWidget {
                   ],
                 ),
               ),
-              // Arrow icon
               const Icon(
                 Icons.arrow_forward_ios,
                 color: Colors.white,

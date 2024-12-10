@@ -235,6 +235,25 @@
         "kelvinTitle": "Kelvin (K)",
         "kelvinDescription": "Escala científica de temperatura absoluta",
         "kelvinDefinition": "La escala Kelvin es la unidad base de temperatura en el SI. Comienza en el cero absoluto (0K), la temperatura teórica más baja posible. No hay temperaturas negativas en Kelvin.\n\nFórmulas de conversión:\nA Celsius: °C = K - 273.15\nA Fahrenheit: °F = (K - 273.15) × 9/5 + 32",
-        "kelvinReferencePoints": "• Cero absoluto: 0K\n• Congelación del agua: 273.15K\n• Temperatura ambiente: ~293-298K\n• Ebullición del agua: 373.15K"
- 
+        "kelvinReferencePoints": "• Cero absoluto: 0K\n• Congelación del agua: 273.15K\n• Temperatura ambiente: ~293-298K\n• Ebullición del agua: 373.15K",
+
+        
+          "measurementMatchGame": "Carrera de Parejas de Medidas",
+          "startGame": "Iniciar Juego",
+          "score": "Puntuación",
+          "time": "Tiempo",
+          "gameOver": "¡Juego Terminado!",
+          "finalScore": "Puntuación Final",
+          "playAgain": "Jugar de Nuevo",
+          "seconds": "s",
+          
+            "howToPlay": "Cómo Jugar",
+            "instructions": "Instrucciones",
+            "gameInstructions": "• Encuentra pares de medidas equivalentes\n• Busca pares entre unidades de EE.UU. y unidades métricas\n• Haz clic en dos tarjetas para ver si coinciden\n• Coincidencia correcta: +100 puntos\n• Coincidencia incorrecta: -20 puntos\n• ¡Completa todos los pares antes de que se acabe el tiempo!",
+            "gotIt": "¡Entendido!",
+            "tutorial": "Tutorial",
+
+              "matchRaceTitle": "Carrera de Parejas de Medidas",
+              "matchRaceDescription": "¡Encuentra medidas equivalentes en una divertida carrera contra el tiempo!"
+            
   }

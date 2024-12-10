@@ -331,6 +331,32 @@
             },
             "kelvinDescription": "Scientific absolute temperature scale",
             "kelvinDefinition": "The Kelvin scale is the SI base unit of temperature. It starts at absolute zero (0K), the theoretical lowest possible temperature. There are no negative temperatures in Kelvin.\n\nConversion formulas:\nTo Celsius: °C = K - 273.15\nTo Fahrenheit: °F = (K - 273.15) × 9/5 + 32",
-            "kelvinReferencePoints": "• Absolute zero: 0K\n• Water freezing: 273.15K\n• Room temperature: ~293-298K\n• Water boiling: 373.15K"
+            "kelvinReferencePoints": "• Absolute zero: 0K\n• Water freezing: 273.15K\n• Room temperature: ~293-298K\n• Water boiling: 373.15K",
+
+                "measurementMatchGame": "Measurement Match Race",
+                "startGame": "Start Game",
+                "score": "Score",
+                "time": "Time",
+                "gameOver": "Game Over!",
+                "finalScore": "Final Score",
+                "playAgain": "Play Again",
+                "seconds": "s",
+
+                    "howToPlay": "How to Play",
+                    "instructions": "Instructions",
+                    "gameInstructions": "• Match pairs of equivalent measurements\n• Find pairs between US units and Metric units\n• Click on two cards to check if they match\n• Correct match: +100 points\n• Wrong match: -20 points\n• Complete all pairs before time runs out!",
+                    "gotIt": "Got it!",
+                    "tutorial": "Tutorial",
+                
+                        "matchRaceTitle": "Measurement Match Race",
+                        "matchRaceDescription": "Match equivalent measurements in a fun race against time!"
+                        
+                          
+        
+
+                    
+                  
+
+ 
 
 }

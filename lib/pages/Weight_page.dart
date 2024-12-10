@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:frugal1/pages/weightUnitPage.dart';
+import 'package:frugal1/pages/weightunitpage.dart';
 import 'package:frugal1/widgets/weight_unit_tile.dart';
 import 'package:frugal1/providers/locale_provider.dart';
 
@@ -115,7 +115,6 @@ class _WeightPageState extends State<WeightPage>
       body: TabBarView(
         controller: _tabController,
         children: [
-          // Metric Units ListView
           ListView.builder(
             itemCount: metricUnits.length,
             itemBuilder: (context, index) {
@@ -123,6 +122,7 @@ class _WeightPageState extends State<WeightPage>
               return WeightUnitTile(
                 title: unit['title']!,
                 description: unit['description']!,
+                unitType: unit['unitType']!,
                 onTap: () {
                   Navigator.push(
                     context,
@@ -136,7 +136,6 @@ class _WeightPageState extends State<WeightPage>
               );
             },
           ),
-          // US Units ListView
           ListView.builder(
             itemCount: usUnits.length,
             itemBuilder: (context, index) {
@@ -144,6 +143,7 @@ class _WeightPageState extends State<WeightPage>
               return WeightUnitTile(
                 title: unit['title']!,
                 description: unit['description']!,
+                unitType: unit['unitType']!,
                 onTap: () {
                   Navigator.push(
                     context,

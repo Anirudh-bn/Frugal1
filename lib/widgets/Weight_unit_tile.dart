@@ -1,21 +1,30 @@
 import 'package:flutter/material.dart';
+import '../services/audio_service.dart';
 
 class WeightUnitTile extends StatelessWidget {
   final String title;
   final String description;
   final VoidCallback onTap;
+  final String unitType;
+  static final AudioService audioService = AudioService();
 
   const WeightUnitTile({
     required this.title,
     required this.description,
     required this.onTap,
+    required this.unitType,
     super.key,
   });
+
+  void _handleTap() {
+    audioService.playUnitAudio(unitType);
+    onTap();
+  }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: _handleTap,
       child: Container(
         height: 80,
         margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),

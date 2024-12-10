@@ -2,14 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frugal1/providers/locale_provider.dart';
+import 'package:frugal1/services/audio_service.dart';
 
-class VolumeUnitPage extends StatelessWidget {
+class VolumeUnitPage extends StatefulWidget {
   final String unitType;
 
   const VolumeUnitPage({
     required this.unitType,
     super.key,
   });
+
+  @override
+  State<VolumeUnitPage> createState() => _VolumeUnitPageState();
+}
+
+class _VolumeUnitPageState extends State<VolumeUnitPage> {
+  final AudioService audioService = AudioService();
+
+  @override
+  void initState() {
+    super.initState();
+    // Play audio when page loads
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      audioService.playUnitAudio(widget.unitType);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +38,7 @@ class VolumeUnitPage extends StatelessWidget {
     String definition;
     List<String> commonUses;
 
-    switch (unitType) {
+    switch (widget.unitType) {
       case 'ml':
         title = l10n.mlTitle;
         definition = l10n.mlDefinition;
@@ -117,6 +134,12 @@ class VolumeUnitPage extends StatelessWidget {
           onPressed: () => Navigator.pop(context),
         ),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.volume_up),
+            onPressed: () {
+              audioService.playUnitAudio(widget.unitType);
+            },
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: TextButton(
@@ -151,6 +174,12 @@ class VolumeUnitPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.brown,
                   ),
+                ),
+                IconButton(
+                  icon: const Icon(Icons.volume_up),
+                  onPressed: () {
+                    audioService.playUnitAudio(widget.unitType);
+                  },
                 ),
                 const SizedBox(height: 20),
                 Container(

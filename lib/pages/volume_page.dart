@@ -123,6 +123,7 @@ class _VolumePageState extends State<VolumePage>
               return VolumeUnitTile(
                 title: unit['title']!,
                 description: unit['description']!,
+                unitType: unit['unitType']!,
                 onTap: () {
                   Navigator.push(
                     context,
@@ -144,6 +145,7 @@ class _VolumePageState extends State<VolumePage>
               return VolumeUnitTile(
                 title: unit['title']!,
                 description: unit['description']!,
+                unitType: unit['unitType']!,
                 onTap: () {
                   Navigator.push(
                     context,

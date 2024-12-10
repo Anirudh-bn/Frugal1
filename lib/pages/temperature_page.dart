@@ -67,6 +67,7 @@ class TemperaturePage extends StatelessWidget {
             title: unit['title']!,
             description: unit['description']!,
             icon: unit['icon'] as IconData,
+            unitType: unit['unitType']!,
             onTap: () {
               Navigator.push(
                 context,

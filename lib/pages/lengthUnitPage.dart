@@ -2,14 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frugal1/providers/locale_provider.dart';
+import 'package:frugal1/services/audio_service.dart';
 
-class LengthUnitPage extends StatelessWidget {
+class LengthUnitPage extends StatefulWidget {
   final String unitType;
 
   const LengthUnitPage({
     required this.unitType,
     super.key,
   });
+
+  @override
+  State<LengthUnitPage> createState() => _LengthUnitPageState();
+}
+
+class _LengthUnitPageState extends State<LengthUnitPage> {
+  final AudioService audioService = AudioService();
+
+  @override
+  void initState() {
+    super.initState();
+    // Play audio when page loads
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      audioService.playUnitAudio(widget.unitType);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +38,8 @@ class LengthUnitPage extends StatelessWidget {
     String definition;
     List<String> commonUses;
 
-    switch (unitType) {
-      case 'mm':
+    switch (widget.unitType) {
+      case 'millimeter':
         title = l10n.mmTitle;
         definition = l10n.mmDefinition;
         commonUses = [
@@ -32,7 +49,7 @@ class LengthUnitPage extends StatelessWidget {
           l10n.mmCommonUses4,
         ];
         break;
-      case 'cm':
+      case 'centimeter':
         title = l10n.cmTitle;
         definition = l10n.cmDefinition;
         commonUses = [
@@ -42,7 +59,7 @@ class LengthUnitPage extends StatelessWidget {
           l10n.cmCommonUses4,
         ];
         break;
-      case 'm':
+      case 'meter':
         title = l10n.mTitle;
         definition = l10n.mDefinition;
         commonUses = [
@@ -52,7 +69,7 @@ class LengthUnitPage extends StatelessWidget {
           l10n.mCommonUses4,
         ];
         break;
-      case 'km':
+      case 'kilometer':
         title = l10n.kmTitle;
         definition = l10n.kmDefinition;
         commonUses = [
@@ -62,7 +79,7 @@ class LengthUnitPage extends StatelessWidget {
           l10n.kmCommonUses4,
         ];
         break;
-      case 'in':
+      case 'inch':
         title = l10n.inTitle;
         definition = l10n.inDefinition;
         commonUses = [
@@ -72,7 +89,7 @@ class LengthUnitPage extends StatelessWidget {
           l10n.inCommonUses4,
         ];
         break;
-      case 'ft':
+      case 'foot':
         title = l10n.ftTitle;
         definition = l10n.ftDefinition;
         commonUses = [
@@ -82,7 +99,7 @@ class LengthUnitPage extends StatelessWidget {
           l10n.ftCommonUses4,
         ];
         break;
-      case 'yd':
+      case 'yard':
         title = l10n.ydTitle;
         definition = l10n.ydDefinition;
         commonUses = [
@@ -92,7 +109,7 @@ class LengthUnitPage extends StatelessWidget {
           l10n.ydCommonUses4,
         ];
         break;
-      case 'mi':
+      case 'mile':
         title = l10n.miTitle;
         definition = l10n.miDefinition;
         commonUses = [
@@ -117,6 +134,13 @@ class LengthUnitPage extends StatelessWidget {
           onPressed: () => Navigator.pop(context),
         ),
         actions: [
+          // Audio button
+          IconButton(
+            icon: const Icon(Icons.volume_up),
+            onPressed: () {
+              audioService.playUnitAudio(widget.unitType);
+            },
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: TextButton(
@@ -144,13 +168,24 @@ class LengthUnitPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.brown,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      title,
+                      style: const TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.brown,
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.volume_up),
+                      onPressed: () {
+                        audioService.playUnitAudio(widget.unitType);
+                      },
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 20),
                 Container(
@@ -234,5 +269,10 @@ class LengthUnitPage extends StatelessWidget {
         },
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 }
